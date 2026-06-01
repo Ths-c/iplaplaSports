@@ -1,0 +1,243 @@
+
+:root{
+    --color-principal: #09D8C7;
+    --color-secundario: #17364F;
+    --color-oscuro: #0D1A2F;
+    --color-acento: #BD0927;
+    --color-acento-oscuro: #500A1F;
+    --color-detalle: #411E3A;
+
+    --texto-claro: #ffffff;
+    --texto-gris: #d9d9d9;
+
+    --sombra: 0 4px 12px rgba(0,0,0,.25);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-oscuro);
+    color: var(--texto-claro);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    max-width: 100%;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+.nav{
+    background-color: var(--color-secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navItem{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navLink{
+    transition: .3s;
+}
+
+.navLink:hover{
+    color: var(--color-principal);
+}
+
+.mainHeroe{
+    min-height: 90vh;
+    background: linear-gradient(
+        rgba(13,26,47,.8),
+        rgba(13,26,47,.8)
+    );
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    text-align: center;
+    padding: 2rem;
+}
+
+.subtitle{
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.title{
+    font-size: 3rem;
+    max-width: 800px;
+}
+
+.mainItem{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btnPrincipal,
+.btnSecundario,
+.infoBtn{
+    padding: .9rem 1.8rem;
+    border-radius: 8px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.btnPrincipal{
+    background-color: var(--color-acento);
+}
+
+.btnPrincipal:hover{
+    background-color: var(--color-acento-oscuro);
+}
+
+.btnSecundario{
+    border: 2px solid var(--color-principal);
+}
+
+.btnSecundario:hover{
+    background-color: var(--color-principal);
+    color: var(--color-oscuro);
+}
+
+.infoBtn{
+    background-color: var(--color-principal);
+    color: var(--color-oscuro);
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.infoGym{
+    padding: 5rem 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.infoItem{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.infoTexto{
+    flex: 1;
+}
+
+.infoTitulo{
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.infoParrafo{
+    line-height: 1.7;
+    color: var(--texto-gris);
+}
+
+.infoImg{
+    flex: 1;
+    min-height: 300px;
+    background-color: var(--color-detalle);
+    border-radius: 10px;
+}
+
+.nuestroEquipo{
+    min-height: 100vh;
+    background-color: var(--color-secundario);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.equipoTitle{
+    font-size: 2.5rem;
+    color: var(--color-principal);
+}
+
+.contacto{
+    background-color: var(--color-acento-oscuro);
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 3rem;
+    padding: 3rem 10%;
+}
+
+.footerTitle{
+    color: var(--color-principal);
+}
+
+.slogan{
+    margin-top: .5rem;
+    color: var(--texto-gris);
+}
+
+.links{
+    display: flex;
+    gap: 4rem;
+}
+
+.listas{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.contactLink:hover{
+    color: var(--color-principal);
+}
+
+@media (max-width: 768px){
+
+    .nav{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .infoItem{
+        flex-direction: column;
+    }
+
+    .contacto{
+        flex-direction: column;
+    }
+
+    .links{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
